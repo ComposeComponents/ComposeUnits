@@ -9,6 +9,5 @@ A helper library for defining spacing and textsizes as a multiple of some base u
 ![Preview](https://img.shields.io/github/v/release/ComposeComponents/Units?label=Preview&include_prereleases)
 
 ```
-```
 implementation "cl.emilym.compose:units:<latest>"
 ```
