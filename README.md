@@ -17,7 +17,7 @@ implementation "cl.emilym.compose:units:<latest>"
 CompositionLocalProvider(
     LocalBaseDp provides 8.dp
 ) {
-    // Box is sized to 8dp by 8dp
+    // Box is sized to 16dp by 16dp
     Box(Modifier.size(2.rdp))
 }
 ```
