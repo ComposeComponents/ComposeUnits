@@ -17,7 +17,7 @@ jobs:
   lint:
     strategy:
       matrix:
-        module: ["compose", "activity", "markdown"]
+        module: ["units"]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3

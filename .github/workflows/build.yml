@@ -35,7 +35,7 @@ jobs:
   build:
     strategy:
       matrix:
-        module: ["compose", "activity", "markdown"]
+        module: ["units"]
     needs:
       - version
     runs-on: ubuntu-latest
@@ -83,7 +83,7 @@ jobs:
   upload-to-release:
     strategy:
       matrix:
-        module: ["compose", "activity", "markdown"]
+        module: ["units"]
     needs:
       - version
       - release
@@ -106,7 +106,7 @@ jobs:
   publish-sonatype:
     strategy:
       matrix:
-        module: ["compose", "activity", "markdown"]
+        module: ["units"]
     needs:
       - version
     runs-on: ubuntu-latest
