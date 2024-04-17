@@ -11,3 +11,13 @@ A helper library for defining spacing and textsizes as a multiple of some base u
 ```
 implementation "cl.emilym.compose:units:<latest>"
 ```
+
+## Usage
+```kotlin
+CompositionLocalProvider(
+    LocalBaseDp provides 8.dp
+) {
+    // Box is sized to 8dp by 8dp
+    Box(Modifier.size(2.rdp))
+}
+```
