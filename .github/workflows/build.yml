@@ -29,8 +29,8 @@ jobs:
       name: Use GitVersion
       uses: gittools/actions/gitversion/execute@v0.9.6
       with:
-        useactionsFile: true
-        actionsFilePath: ./gitversion.yml
+        useConfigFile: true
+        configFilePath: ./gitversion.yml
     - name: Display SemVer
       run: 'echo "SemVer: ${{ steps.gitversion.outputs.semVer }}"'
   build:
@@ -111,6 +111,7 @@ jobs:
       contents: read
     needs:
     - version
+    if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     strategy:
       matrix:
