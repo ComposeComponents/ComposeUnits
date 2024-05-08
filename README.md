@@ -1,6 +1,6 @@
 <p align="center">
     <a href="https://github.com/TechlauncherFireApp/mobile" rel="noopener">
-        <img width=200px src="https://raw.githubusercontent.com/ComposeComponents/.github/main/logo_transparent.png" ></img>
+        <img width=150px src="https://raw.githubusercontent.com/ComposeComponents/.github/main/logo_transparent.png" ></img>
     </a>
     <h1 align="center">Units</h1>
     <p align="center">
