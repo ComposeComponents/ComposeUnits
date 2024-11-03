@@ -3,7 +3,6 @@ package cl.emilym.compose.units
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.unit.Dp
-import androidx.compose.ui.unit.dp
 
 val Double.px: Dp
     @Composable
