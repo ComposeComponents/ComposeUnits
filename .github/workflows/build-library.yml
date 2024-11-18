@@ -222,9 +222,9 @@ jobs:
         ORG_GRADLE_PROJECT_signingInMemoryKey: ${{ secrets.PGP_SECRET_KMP }}
         ORG_GRADLE_PROJECT_signingInMemoryKeyPassword: ${{ secrets.PGP_PASSPHRASE }}
       run: |-
-        ./gradlew -Pversion=${{ needs.version.outputs.version }}
-        -Ppom.url="https://github.com/${{ github.repository }}"
-        -Ppom.scm.connection="scm:git:git://github.com/${{ github.repository }}"
-        -Ppom.scm.developerConnection="scm:git:ssh://github.com/${{ github.repository }}"
-        -Ppom.scm.url="https://github.com/${{ github.repository }}"
+        ./gradlew -Pversion=${{ needs.version.outputs.version }} \
+        -Ppom.url="https://github.com/${{ github.repository }}" \
+        -Ppom.scm.connection="scm:git:git://github.com/${{ github.repository }}" \
+        -Ppom.scm.developerConnection="scm:git:ssh://github.com/${{ github.repository }}" \
+        -Ppom.scm.url="https://github.com/${{ github.repository }}" \
         ${{ matrix.module }}:publishAndReleaseToMavenCentral --no-configuration-cache
