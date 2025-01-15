@@ -15,6 +15,7 @@ workflows = new Listing {
             target.buildAndroidMultiplatformTarget("units")
             target.buildJvmMultiplatformTarget("units")
             target.buildWasmJsMultiplatformTarget("units")
+            target.buildJsMultiplatformTarget("units")
         }
     }
     import("package://components.emilym.cl/actions/actions@0.1.13#/lint.pkl")

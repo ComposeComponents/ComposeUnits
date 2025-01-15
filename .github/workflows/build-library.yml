@@ -129,6 +129,13 @@ jobs:
             name: units-wasm-js.klib
             location: ./units/build/libs/units-wasm-js-${{ needs.version.outputs.version }}.klib
             needsZip: false
+        - command: :units:jsJar
+          os: ubuntu-latest
+          output0:
+            key: units-js-klib
+            name: units-js.klib
+            location: ./units/build/libs/units-js-${{ needs.version.outputs.version }}.klib
+            needsZip: false
     steps:
     - uses: actions/checkout@v4
       with:
@@ -241,6 +248,9 @@ jobs:
           mimeType: application/zip
         - key: units-wasm-js-klib
           name: units-wasm-js.klib
+          mimeType: application/zip
+        - key: units-js-klib
+          name: units-js.klib
           mimeType: application/zip
     steps:
     - uses: actions/download-artifact@v4
