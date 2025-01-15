@@ -32,7 +32,7 @@ kotlin {
                 }
             }
         }
-        jvm("desktop")
+        jvm()
 
         js(IR) {
             browser()
@@ -66,8 +66,6 @@ kotlin {
     }
     
     sourceSets {
-        val desktopMain by getting
-
         commonMain.dependencies {
             implementation(compose.runtime)
             implementation(compose.foundation)
@@ -77,7 +75,7 @@ kotlin {
         commonTest.dependencies {
             implementation(libs.kotlin.test)
         }
-        desktopMain.dependencies {}
+        jvmMain.dependencies {}
     }
 }
 
@@ -91,8 +89,8 @@ android {
         minSdk = 21
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_11
+        targetCompatibility = JavaVersion.VERSION_11
     }
 }
 
